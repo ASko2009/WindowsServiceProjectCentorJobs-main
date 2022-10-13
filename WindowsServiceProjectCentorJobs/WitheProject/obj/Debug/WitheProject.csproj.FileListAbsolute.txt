@@ -1,0 +1,15 @@
+G:\проект\CentorJob\WindowsServiceProjectCentorJobs\WitheProject\bin\Debug\WitheProject.exe.config
+G:\проект\CentorJob\WindowsServiceProjectCentorJobs\WitheProject\bin\Debug\WitheProject.exe
+G:\проект\CentorJob\WindowsServiceProjectCentorJobs\WitheProject\bin\Debug\WitheProject.pdb
+G:\проект\CentorJob\WindowsServiceProjectCentorJobs\WitheProject\obj\Debug\WitheProject.csproj.AssemblyReference.cache
+G:\проект\CentorJob\WindowsServiceProjectCentorJobs\WitheProject\obj\Debug\WitheProject.csproj.CoreCompileInputs.cache
+G:\проект\CentorJob\WindowsServiceProjectCentorJobs\WitheProject\obj\Debug\WitheProject.exe
+G:\проект\CentorJob\WindowsServiceProjectCentorJobs\WitheProject\obj\Debug\WitheProject.pdb
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\bin\Debug\WitheProject.exe.config
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\bin\Debug\WitheProject.exe
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\bin\Debug\WitheProject.pdb
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\obj\Debug\WitheProject.csproj.AssemblyReference.cache
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\obj\Debug\WitheProject.csproj.SuggestedBindingRedirects.cache
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\obj\Debug\WitheProject.csproj.CoreCompileInputs.cache
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\obj\Debug\WitheProject.exe
+G:\проект\WindowsServiceProjectCentorJobs-main\WitheProject\obj\Debug\WitheProject.pdb
