@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Numerics;
 
 namespace Documents
 {
@@ -11,7 +12,7 @@ namespace Documents
     {
         
         public string ErorrList = null;
-        public int IDCentr;
+        public Int64 IDCentr = 1;
         public string FSSPType;
 
         public string guidFSSP;

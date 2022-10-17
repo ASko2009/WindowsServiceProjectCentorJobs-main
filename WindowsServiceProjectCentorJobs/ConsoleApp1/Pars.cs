@@ -30,6 +30,9 @@ namespace WindowsServiceProjectCentorJobs
                                 doc.guidFSSP = oneQwery.Attribute("GUID").Value;
                                 break;
                             }
+                    }
+                    switch (oneQwery.Attribute("type").Name.LocalName)
+                    {
                         case "type":
                             {
                                 doc.FSSPType = oneQwery.Attribute("type").Value;
@@ -107,21 +110,12 @@ namespace WindowsServiceProjectCentorJobs
                 {
                     LogInFile.СreateEntryInFile(doc.NameZeroElement());
                     doc.ErorrList = doc.NameZeroElement();
-                    
+
                     using var dbContext = new NutshellContext();
                     Enty insertBeadQwery =new Enty();
-                    insertBeadQwery.IDCentr = 1;
-                    insertBeadQwery.FSSPGUID = doc.guidFSSP;
-                    insertBeadQwery.ErorrList = doc.ErorrList;
-                    insertBeadQwery.DateINStart = DateTime.Now;
-                    insertBeadQwery.NextStart = DateTime.Now;
-                    insertBeadQwery.LastСhange= DateTime.Now;  
-                    insertBeadQwery.StateJob = 1;
+                    insertBeadQwery.InsertBdQweryState0(doc, state: 400, idCentr: doc.IDCentr);
                     dbContext.Add(insertBeadQwery);
                     dbContext.SaveChanges();
-
-
-
 
                     CvtOut cvt = new CvtOut();
                     cvt.CreateBeadCvtQweryForFSSP(GUID: doc.guidFSSP, errorText: doc.NameZeroElement());
@@ -133,12 +127,11 @@ namespace WindowsServiceProjectCentorJobs
                 {
                     using var dbContext = new NutshellContext();
                     Enty insertBeadQwery = new Enty();
-                    insertBeadQwery.InsertBdQweryState0(doc);
+                    insertBeadQwery.InsertBdQweryState0(doc, state:1, idCentr:doc.IDCentr);;
                     dbContext.Add(insertBeadQwery);
                     dbContext.SaveChanges();
 
                     Console.WriteLine("OK");
-                    Console.ReadLine();
                 }
                 ///открыть коннект к базе передать данные для заполнния  
 

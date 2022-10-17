@@ -4,8 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+using System.Configuration;
+using Microsoft.IdentityModel.Protocols;
+using Microsoft.Extensions.Configuration;
 
 namespace ConsoleApp1.connectionEntity
 {
@@ -13,8 +19,8 @@ namespace ConsoleApp1.connectionEntity
     {
 
         [Key]
-        public int ID { get; set; }
-        public int IDCentr { get; set; }
+        public Int64 ID { get; set; }
+        public Int64 IDCentr { get; set; }
         public string FSSPType { get; set; }
         public string FSSPGUID { get; set; }
         public int StateJob { get; set; }
@@ -38,12 +44,12 @@ namespace ConsoleApp1.connectionEntity
         public string ErorrList { get; set; }
         public DateTime NextStart { get; set; }
 
-        public void InsertBdQweryState0 (RequestDocumentsIN doc)
+        public void InsertBdQweryState0(RequestDocumentsIN doc, int state, Int64 idCentr)
         {
-            IDCentr = doc.IDCentr;
+            IDCentr = idCentr;
             FSSPType = doc.FSSPType;
             FSSPGUID = doc.guidFSSP;
-            StateJob = 1;
+            StateJob = state;
             DateINStart = DateTime.Now;
             InWork = 0;
             LastСhange = DateTime.Now;
@@ -74,7 +80,7 @@ namespace ConsoleApp1.connectionEntity
 
         public DbSet<Enty> JobsQwery { get; set; }
 
-  
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server =DESKTOP-IVGI18B\\SQLEXPRESS; Database =TestFSSP; Trusted_Connection=True;");
@@ -83,6 +89,13 @@ namespace ConsoleApp1.connectionEntity
 
     }
 
-   
+    public class GetDocinBDstate0
+    {
+        public XElement xmlDocs;
+        public int numberOfThreads;
+
+
+
+    }
 
 }
