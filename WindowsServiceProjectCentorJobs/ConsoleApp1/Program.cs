@@ -18,17 +18,18 @@ namespace WitheProject
     {
         static void Main(string[] args)
         {
+            
 
-            Config conf = new Config();
-            conf.Bilder();
-            Console.ReadLine();
+            Console.WriteLine(Config.CONFIGData["QuantityTread"].ToString());
+            Console.ReadLine(); 
+
 
             ///using var dbContext = new NutshellContext();
             ///Console.WriteLine(dbContext.JobsQwery.Count());
             ///Console.ReadLine();
 
             XMLQwery qwery = new XMLQwery();
-            qwery.ParseQweryFSSPXMLInTableJobsQwery(@"G:\проект\WindowsServiceProjectCentorJobs-main\DocsForLoingAndLog\XMLin\Новый1.xml");
+            qwery.ParseQweryFSSPXMLInTableJobsQwery(Directory.GetCurrentDirectory().ToString() + @"\DocsForLoingAndLog\XMLin\Новый1.xml");
 
        
 

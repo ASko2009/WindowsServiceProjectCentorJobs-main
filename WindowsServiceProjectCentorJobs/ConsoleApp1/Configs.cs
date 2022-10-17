@@ -5,19 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using Microsoft.Extensions.Configuration;
+using System.Reflection;
+using System.IO;
+
 
 namespace ConsoleApp1
 {
-    public class Config
+    public static class Config
     {
-        public void Bilder()
+        public static IConfigurationRoot CONFIGData = Bilder();
+        public static IConfigurationRoot Bilder ()
         {
-
-            IConfigurationBuilder bild = new ConfigurationBuilder().AddJsonFile(@"G:\проект\WindowsServiceProjectCentorJobs\ConsoleApp1\appSettings.json", true, true);
+            IConfigurationBuilder bild = new ConfigurationBuilder().AddJsonFile(Directory.GetCurrentDirectory().ToString() + @"\appSettings.json", true, true);
             IConfigurationRoot root = bild.Build();
-            Console.WriteLine( root["QuantityTread"].ToString());
+            return root;
+
+
+
         }
+
+        
 
 
     }
+    
 }

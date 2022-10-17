@@ -117,3 +117,4 @@ G:\проект\WindowsServiceProjectCentorJobs\ConsoleApp1\bin\Debug\net6.0\Mic
 G:\проект\WindowsServiceProjectCentorJobs\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 G:\проект\WindowsServiceProjectCentorJobs\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
 G:\проект\WindowsServiceProjectCentorJobs\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+G:\проект\WindowsServiceProjectCentorJobs\ConsoleApp1\bin\Debug\net6.0\appSettings.json

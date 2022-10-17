@@ -10,7 +10,7 @@ namespace Logging
 
         public static void СreateEntryInFile(string textError)
         {
-            string pathToFile = @"G:\проект\WindowsServiceProjectCentorJobs-main\DocsForLoingAndLog\log" + DateTime.Now.ToString("dd.MM.yyyy") + ".txt";
+            string pathToFile = Directory.GetCurrentDirectory().ToString()+@"\DocsForLoingAndLog\log\"+ DateTime.Now.ToString("dd.MM.yyyy") + ".txt";
 
 
             using (FileStream fileLog = new FileStream(pathToFile, FileMode.Append))

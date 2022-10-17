@@ -83,7 +83,8 @@ namespace ConsoleApp1.connectionEntity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server =DESKTOP-IVGI18B\\SQLEXPRESS; Database =TestFSSP; Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(Config.CONFIGData["ConnectionString1"]);
+            ///"Server =DESKTOP-IVGI18B\\SQLEXPRESS; Database =TestFSSP; Trusted_Connection=True;");
         }
 
 
